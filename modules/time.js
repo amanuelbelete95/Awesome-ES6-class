@@ -1,15 +1,13 @@
-const time = () => {
-  const dateElement = document.getElementById('date');
-  const date = new Date();
+import { DateTime } from './luxon.js';
 
-const month = date.toLocaleString('default', { month: 'long' });
-const day = date.getDate();
-const year = date.getFullYear();
-const time = date.toLocaleString('en-US', {
-  hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
-});
+const updateTime = () => {
+  const now = DateTime.now();
+  const options = { month: 'short', day: 'numeric', year: 'numeric' };
+  const date = now.toLocaleString(options);
+  const time = now.toLocaleString(DateTime.TIME_WITH_SECONDS);
+  document.getElementById('date').innerHTML = `${date} , ${time}`;
+};
 
-dateElement.textContent = `${month} ${day} ${year}, ${time}`;
-}
+setInterval(updateTime, 1000);
 
-export default time;
+export default updateTime;

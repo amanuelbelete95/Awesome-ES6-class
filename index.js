@@ -1,4 +1,4 @@
-
+/* eslint-disable max-classes-per-file */
 import time from './modules/time.js'
 
 import loadLibraryFromLocalStorage from './modules/onload.js';
