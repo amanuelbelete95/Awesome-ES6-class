@@ -1,6 +1,6 @@
-import Book from './BookClass.js'
-import Library from './library.js'
-import setValue from './setValue.js'
+import Book from './BookClass.js';
+import Library from './library.js';
+import setValue from './setValue.js';
 
 const loadLibraryFromLocalStorage = () => {
   let library2;

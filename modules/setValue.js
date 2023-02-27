@@ -1,4 +1,4 @@
-import { bookContainer } from "./selector.js";
+import { bookContainer } from './selector.js';
 
 const setValue = (library) => {
   const bookElements = library.books.map((book) => {
@@ -26,6 +26,6 @@ const setValue = (library) => {
 
   bookContainer.innerHTML = '';
   bookContainer.append(...bookElements);
-}
+};
 
 export default setValue;

@@ -2,8 +2,7 @@ import {
   form, contact, contactSection, list, listBook, add1,
 } from './selector.js';
 
-
-export const listClick =  () => {
+export const listClick = () => {
   form.style.display = 'none';
   contactSection.style.display = 'none';
   listBook.style.display = 'flex';
